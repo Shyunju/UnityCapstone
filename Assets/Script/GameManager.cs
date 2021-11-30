@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         {
             talkText.text = talkData;
         }
-        5+
+        
         isAction = true;
         talkIndex++;
     }
