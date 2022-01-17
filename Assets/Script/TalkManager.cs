@@ -29,20 +29,9 @@ public class TalkManager : MonoBehaviour
 
 
         //quest talk
-        talkData.Add(10 + 2000, new string[] { "어서오게..", "나는 촌장이네", "병원부터 가보게나"});
-        talkData.Add(11 + 5000, new string[] { "어서오세요", "약을 가져가시면 되요." });
+        talkData.Add(2000 + 10, new string[] { "어서오게..나는 촌장이다네", "요즘 마을이 어수선하여 자네를 불렀다네"
+            , "우리 마을 사람들을 도와주면서 범인을 찾아주시게나"});
 
-
-        talkData.Add(20 + 2000, new string[] { "고맙네." });
-
-
-        talkData.Add(30 + 3000, new string[] { "정비소에 오신것을 환영한다.","가서 먹을것 좀 사와줘...." });
-        talkData.Add(31 + 7000, new string[] { "요기요기" });
-
-        talkData.Add(40 + 0, new string[] { "퀘스트클리어" });
-
-        talkData.Add(50 + 7000, new string[] { "요기요기" });
-        talkData.Add(51 + 2000, new string[] { "요기요기" });
 
     }
 
