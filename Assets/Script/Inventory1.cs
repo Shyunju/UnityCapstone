@@ -21,6 +21,11 @@ public class Inventory1 : MonoBehaviour
     public delegate void OnSlotCountChange(int val);
     public OnSlotCountChange onSlotCountChange;
 
+    public delegate void OnChangeItem();
+    public OnChangeItem onChangeItem;
+
+
+    public List<item> items1 = new List<item>();
 
     private int slotCnt;
 
@@ -42,11 +47,26 @@ public class Inventory1 : MonoBehaviour
         SlotCnt = 4;
     }
 
-  public List<item> items = new List<item>();
 
   public bool Additem(item _item)
     {
-        items.Add(_item);
-        return true;
+        if(items1.Count < SlotCnt)
+        {
+            items1.Add(_item);
+            if(onChangeItem != null)
+            onChangeItem.Invoke();
+            return true;
+        }
+        return false;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("FieldItem"))
+        {
+            FieldItems fielditems = collision.GetComponent<FieldItems>();
+            if (Additem(fielditems.GetItem()))
+                fielditems.DestroyItem();
+        }
+    }
+
 }

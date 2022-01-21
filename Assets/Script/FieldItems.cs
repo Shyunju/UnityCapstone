@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class FieldItems : MonoBehaviour
 {
-    public item item;
+    public item item1;
     public SpriteRenderer image;
 
     public void SetItem(item _item)
     {
-        item.itemName = _item.itemName;
-        item.itemImage = _item.itemImage;
-        item.itemType = _item.itemType;
+        item1.itemName = _item.itemName;
+        item1.itemImage = _item.itemImage;
+        item1.itemType = _item.itemType;
 
-        image.sprite = item.itemImage;
+        image.sprite = item1.itemImage;
     }
 
     public item GetItem()
     {
-        return item;
+        return item1;
     }
-    public void Destroy()
+    public void DestroyItem()
     {
         Destroy(gameObject);
     }
