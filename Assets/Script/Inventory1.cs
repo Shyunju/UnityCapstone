@@ -29,6 +29,7 @@ public class Inventory1 : MonoBehaviour
 
     private int slotCnt;
 
+    //아이템 슬롯 증가
     public int SlotCnt
     {
         get
@@ -47,7 +48,7 @@ public class Inventory1 : MonoBehaviour
         SlotCnt = 4;
     }
 
-
+    //아이템 추가 기능
   public bool Additem(item _item)
     {
         if(items1.Count < SlotCnt)
@@ -59,6 +60,8 @@ public class Inventory1 : MonoBehaviour
         }
         return false;
     }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("FieldItem"))
