@@ -12,7 +12,7 @@ public class QuestManager : MonoBehaviour
 
     void Awake()
     {
-        questList = new Dictionary<int, QuestData>();
+        questList = new Dictionary<int, QuestData>(); // 퀘스트id , 퀘스트데이터(퀘스트 이름, npcid배열)
         GenerateData();
     }
 
@@ -30,22 +30,20 @@ public class QuestManager : MonoBehaviour
     //5000 병원
 
 
-    public int GetQuestTalkIndex(int id)
+    public int GetQuestTalkIndex(int id) //퀘스트인덱스 얻어오기
     {
-        return questId+ questActionIndex;
+        return questId+ questActionIndex; //(퀘스트아이디 + 퀘스트 인덱스) 값을 반환
     }
 
 
-    public string CheckQuest(int id)
+    public string CheckQuest(int id) //퀘스트 체크
     {
-        Debug.Log(questList[questId].npcId[questActionIndex]);
-
-        if(questList[questId].npcId[questActionIndex] == 0)
+        if(questList[questId].npcId[questActionIndex] == 0) //퀘스트리스트에 있는 해당 퀘스트아이디의 npcid가 0이라면 다음퀘스트로
         {
             NextQuest();
         }
 
-        if (id == questList[questId].npcId[questActionIndex])
+        if (id == questList[questId].npcId[questActionIndex]) //들어온 아이디가 npcid와 같다면 인덱스증가
         {
             questActionIndex++;
             //dbug.Log("인덱스조건문에 들어옴 : " +);
@@ -55,17 +53,19 @@ public class QuestManager : MonoBehaviour
         
         // ControlObject();
 
-        if (questActionIndex == questList[questId].npcId.Length)
+        if (questActionIndex == questList[questId].npcId.Length) //퀘스트가 완료 되면 다음 퀘스트로
             NextQuest();
         
-        return questList[questId].questName;
-    }
-    public string CheckQuest()
-    {
-        return questList[questId].questName;
+        return questList[questId].questName; // 해당퀘스트 이름을 반환
     }
 
-    void NextQuest()
+
+    public string CheckQuest()
+    {
+        return questList[questId].questName; //해당퀘스트를 반환
+    }
+
+    void NextQuest() //다음퀘스트로 퀘스트 아이디 증가
     {
         questId += 10;
         questActionIndex = 0;
