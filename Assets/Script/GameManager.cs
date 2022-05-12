@@ -14,12 +14,6 @@ public class GameManager : MonoBehaviour
     public int talkIndex;
     public GameObject next;
 
-      void Start()
-    {
-        Debug.Log(questManager.CheckQuest());
-
-    }
-
 
     public void Action(GameObject scanObj)
     {
@@ -35,14 +29,14 @@ public class GameManager : MonoBehaviour
     void Talk(int id, bool isNpc)
     {
         int questTalkIndex = questManager.GetQuestTalkIndex(id);
-
         string talkData = talkManager.GetTalk(id+questTalkIndex, talkIndex);
 
-        if(talkData == null)
+        if(talkData == null)//대화가 끝나면
         {
             isAction = false;
             talkIndex = 0;
-            questManager.CheckQuest(id);
+            questManager.CheckQuest(id);//퀘스트 순번 증가
+            Debug.Log(questManager.CheckQuest(id)); 
             return;
         }
 

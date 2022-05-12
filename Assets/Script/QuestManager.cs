@@ -4,22 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 public class QuestManager : MonoBehaviour
 {
-    public int questId;
-    public int questActionIndex;
-    //public GameObject[] questObject;
+    public int questId; //진행중인 퀘스트 아이디 유니티인스펙터에 값을 작성
+    public int questActionIndex; //퀘스트대화순서 변수
 
-    Dictionary<int, QuestData> questList;
+    Dictionary<int, QuestData> questList;  // 딕셔너리 생성
 
-    void Awake()
+    void Awake() // 초기화
     {
         questList = new Dictionary<int, QuestData>(); // 퀘스트id , 퀘스트데이터(퀘스트 이름, npcid배열)
         GenerateData();
     }
 
     // Update is called once per frame
-    void GenerateData()
+    void GenerateData()//퀘스트 저장
     {
-        questList.Add(10, new QuestData("촌장에게 가보자", new int[] {2000,5000}));
+        questList.Add(10, new QuestData("촌장에게 가보자", new int[] {2000,8000})); // 퀘스트아이디,퀘스트데이터 저장
+        questList.Add(20, new QuestData("아들에게 가보자", new int[] {6000,8000,11000,6000})); // 퀘스트아이디,퀘스트데이터 저장
        
     }
 
@@ -46,8 +46,6 @@ public class QuestManager : MonoBehaviour
         if (id == questList[questId].npcId[questActionIndex]) //들어온 아이디가 npcid와 같다면 인덱스증가
         {
             questActionIndex++;
-            //dbug.Log("인덱스조건문에 들어옴 : " +);
-
         }
         
         
@@ -60,10 +58,6 @@ public class QuestManager : MonoBehaviour
     }
 
 
-    public string CheckQuest()
-    {
-        return questList[questId].questName; //해당퀘스트를 반환
-    }
 
     void NextQuest() //다음퀘스트로 퀘스트 아이디 증가
     {
