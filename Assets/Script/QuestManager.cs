@@ -19,7 +19,7 @@ public class QuestManager : MonoBehaviour
     void GenerateData()//퀘스트 저장
     {
         questList.Add(10, new QuestData("촌장에게 가보자", new int[] {2000,8000})); // 퀘스트아이디,퀘스트데이터 저장
-        questList.Add(20, new QuestData("아들에게 가보자", new int[] {6000,8000,11000,6000})); // 퀘스트아이디,퀘스트데이터 저장
+        questList.Add(20, new QuestData("아들에게 가보자", new int[] {12000,11000,12000})); // 퀘스트아이디,퀘스트데이터 저장
        
     }
 
@@ -56,6 +56,10 @@ public class QuestManager : MonoBehaviour
         
         return questList[questId].questName; // 해당퀘스트 이름을 반환
     }
+    public string CheckQuest() //퀘스트 체크
+    {
+        return questList[questId].questName; // 해당퀘스트 이름을 반환
+    }
 
 
 
@@ -64,6 +68,7 @@ public class QuestManager : MonoBehaviour
         questId += 10;
         questActionIndex = 0;
     }
+
 
     /*void ControlObject()
     {

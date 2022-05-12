@@ -25,6 +25,7 @@ public class TalkManager : MonoBehaviour
         talkData.Add(9000, new string[] { "안녕?", "여긴 보초소야" });
         talkData.Add(10000, new string[] { "안녕?", "여긴 마을회관이야" });
         talkData.Add(11000, new string[] { "안녕?", "문제의 동상이야" });
+        talkData.Add(12000, new string[] { "안녕?", "난 촌장아들이야" });
         talkData.Add(100, new string[] { "스트렌지 마을에 오신것을 환영합니다~"});
 
 
@@ -33,34 +34,21 @@ public class TalkManager : MonoBehaviour
             , "우리 마을 사람들을 도와주면서 범인을 찾아주시게나:2"});
         talkData.Add(11 + 8000, new string[] { "어서오게..나는 촌장이다네:0", "요즘 마을이 어수선하여 자네를 불렀다네:1"
             , "우리 마을 사람들을 도와주면서 범인을 찾아주시게나:2"});
-        talkData.Add(20 + 6000, new string[] { "안녕 나는 촌장 아들이야", "내가 바빠서 그런데 중요한 사진좀 찾아줄수 있을까?:1"
+        talkData.Add(20 + 12000, new string[] { "안녕 나는 촌장 아들이야", "내가 바빠서 그런데 중요한 사진좀 찾아줄수 있을까?:1"
             , "이건 부탁이 아니라 명령이야!"});
         talkData.Add(21 + 11000, new string[] { "사진을 찾았다", "아들한테 가보자"});
-        talkData.Add(22 + 6000, new string[] { "고마워 찾아줘서", "이건 답례야"});
+        talkData.Add(22 + 12000, new string[] { "고마워 찾아줘서", "이건 답례야"});
 
     }
 
 
-    public string GetTalk(int id, int talkIndex) // 2012 
+    public string GetTalk(int id, int talkIndex) 
     {
-        if(!talkData.ContainsKey(id))
-        {
+        if (!talkData.ContainsKey(id))
             if (!talkData.ContainsKey(id - id % 10))
-            {
-                if (talkIndex == talkData[id - id % 100].Length)
-                    return null;
-                else
-                    return talkData[id - id % 100][talkIndex];
-            
-            }
+               return GetTalk(id - id % 100, talkIndex);
             else
-            {
-                if (talkIndex == talkData[id - id % 10].Length)
-                    return null;
-                else
-                    return talkData[id - id % 10][talkIndex];
-            }
-        }
+               return GetTalk(id - id % 10, talkIndex);
          
         if (talkIndex == talkData[id].Length)
             return null;
