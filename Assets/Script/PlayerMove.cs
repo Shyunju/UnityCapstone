@@ -122,23 +122,27 @@ public class PlayerMove : MonoBehaviour
         left_Up = false;
         right_Up = false;
     }
+
+
     void FixedUpdate() {
 
         Vector2 moveVec = isHorizonMove ? new Vector2(h, 0) : new Vector2(0, v);
 
         rigid.velocity = moveVec * Speed;
 
-        //Ray
+        //조사액션
         Debug.DrawRay(rigid.position, dirVec * 0.7f, new Color(0, 1, 0));
         RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, dirVec, 0.7f, LayerMask.GetMask("Object"));
 
         if (rayHit.collider != null)
+        {
             scanObject = rayHit.collider.gameObject;
-        
+        }
         else
             scanObject = null;
 
     }
+
     public void ButtonDown(string type)
     {
         switch (type)
