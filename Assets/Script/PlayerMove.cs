@@ -122,6 +122,8 @@ public class PlayerMove : MonoBehaviour
         left_Up = false;
         right_Up = false;
     }
+
+
     void FixedUpdate() {
 
         Vector2 moveVec = isHorizonMove ? new Vector2(h, 0) : new Vector2(0, v);
@@ -140,6 +142,7 @@ public class PlayerMove : MonoBehaviour
             scanObject = null;
 
     }
+
     public void ButtonDown(string type)
     {
         switch (type)

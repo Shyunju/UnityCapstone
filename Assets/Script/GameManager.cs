@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public bool isAction;
     public int talkIndex;
     public GameObject next;
-
+    public statue statue;
 
     void Start()
     {
@@ -27,10 +27,10 @@ public class GameManager : MonoBehaviour
             scanObject = scanObj;
             ObjData objData = scanObject.GetComponent<ObjData>();
             Talk(objData.id, objData.isNpc);
-        
             talkPanel.SetActive(isAction);
             next.SetActive(isAction);
     }
+
 
     void Talk(int id, bool isNpc)
     {
@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
 
         if(talkData == null)//대화가 끝나면
         {
+            if (id == 11000)
+            {
+                statue.Bomb();
+            }
             isAction = false;
             talkIndex = 0;
             questManager.CheckQuest(id);//퀘스트 순번 증가
@@ -49,6 +53,7 @@ public class GameManager : MonoBehaviour
         if (isNpc)
         {
             talkText.text = talkData;
+              
         }
         else
         {

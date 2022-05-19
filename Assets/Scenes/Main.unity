@@ -1239,7 +1239,6 @@ GameObject:
   m_Component:
   - component: {fileID: 276502815}
   - component: {fileID: 276502814}
-  - component: {fileID: 276502816}
   - component: {fileID: 276502817}
   - component: {fileID: 276502818}
   m_Layer: 3
@@ -1314,20 +1313,6 @@ Transform:
   m_Father: {fileID: 1694970561}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &276502816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276502813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6623271dd17e7c4daa9dcbe3115dfaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 6000
-  isNpc: 1
 --- !u!61 &276502817
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3073,6 +3058,7 @@ GameObject:
   - component: {fileID: 836487928}
   - component: {fileID: 836487927}
   - component: {fileID: 836487926}
+  - component: {fileID: 836487929}
   - component: {fileID: 836487925}
   m_Layer: 3
   m_Name: statue
@@ -3184,8 +3170,21 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1694970561}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &836487929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836487924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8d0d463a2abe44786125c7efd8a40e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changedImage: {fileID: 21300000, guid: 88dd74590b34fdb41ba52b6a7bfd82c3, type: 3}
 --- !u!224 &910231351 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2922167092873426339, guid: 54f795b0ed682b74382f838858d45280, type: 3}
@@ -10755,8 +10754,8 @@ Tilemap:
   - first: {x: -17, y: -3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 9
-      m_TileSpriteIndex: 19
+      m_TileIndex: 11
+      m_TileSpriteIndex: 25
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -17022,11 +17021,11 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: cdde44cbf0529004ebca0b9fc0ba790a, type: 2}
-  - m_RefCount: 1107
+  - m_RefCount: 1106
     m_Data: {fileID: 11400000, guid: 746bc0a4b3d72084e8885e62475baef6, type: 2}
   - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: f26d80bd4c7542c47a83ff4ee9363472, type: 2}
-  - m_RefCount: 9
+  - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: 8bee2b8c278e73946a93eb88d59d6121, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 9a3ebc923051de242a67ee3d41c707c6, type: 2}
@@ -17111,7 +17110,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: -8420670720628680731, guid: b3f07f17f2e4e554faa030c04c0c6c4d, type: 3}
-  - m_RefCount: 1107
+  - m_RefCount: 1106
     m_Data: {fileID: 4035501790466999928, guid: b3f07f17f2e4e554faa030c04c0c6c4d, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: -4727883650153844040, guid: b54dd1fbdd006fe4a8835e12c825ab2f, type: 3}
@@ -17123,7 +17122,7 @@ Tilemap:
     m_Data: {fileID: 6878842673026121434, guid: b54dd1fbdd006fe4a8835e12c825ab2f, type: 3}
   - m_RefCount: 10
     m_Data: {fileID: 8266258911003420344, guid: b3f07f17f2e4e554faa030c04c0c6c4d, type: 3}
-  - m_RefCount: 9
+  - m_RefCount: 10
     m_Data: {fileID: -8717017754119436831, guid: b3f07f17f2e4e554faa030c04c0c6c4d, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -5903196083883763113, guid: b54dd1fbdd006fe4a8835e12c825ab2f, type: 3}
@@ -22704,7 +22703,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1694970561}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1217398449
 BoxCollider2D:
@@ -33685,8 +33684,8 @@ Transform:
   - {fileID: 568525396}
   - {fileID: 1876472481}
   - {fileID: 818334830}
-  - {fileID: 1217398448}
   - {fileID: 836487928}
+  - {fileID: 1217398448}
   - {fileID: 1440284739}
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -34844,6 +34843,7 @@ MonoBehaviour:
   isAction: 0
   talkIndex: 0
   next: {fileID: 274185315}
+  statue: {fileID: 836487929}
 --- !u!4 &1831713876
 Transform:
   m_ObjectHideFlags: 0

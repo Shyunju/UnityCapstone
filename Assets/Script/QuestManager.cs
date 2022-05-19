@@ -17,18 +17,27 @@ public class QuestManager : MonoBehaviour
 
     // Update is called once per frame
     void GenerateData()//퀘스트 저장
-    {
-        questList.Add(10, new QuestData("촌장에게 가보자", new int[] {2000,8000})); // 퀘스트아이디,퀘스트데이터 저장
-        questList.Add(20, new QuestData("아들에게 가보자", new int[] {12000,11000,12000})); // 퀘스트아이디,퀘스트데이터 저장
+    {// 퀘스트아이디,퀘스트데이터 저장
+  
+        questList.Add(10, new QuestData("촌장에게 가보자", new int[] {2000,8000})); 
+        questList.Add(20, new QuestData("아들에게 가보자", new int[] {12000,11000,12000})); 
        
     }
-
-    //1000 연구소
-    //2000 촌장
-    //3000 정비소
-    //4000 카메라
-    //5000 병원
-
+/*
+연구원 / 1000
+촌장 / 2000
+정비소 / 3000
+사진사 / 4000
+의사 / 5000
+유치원선생 / 6000
+선생님 / 7000
+슬립 / 8000
+병사 / 9000
+할아버지 / 10000
+동상 / 11000
+아들 / 12000
+표지판 / 100
+*/
 
     public int GetQuestTalkIndex(int id) //퀘스트인덱스 얻어오기
     {

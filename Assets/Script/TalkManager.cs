@@ -26,7 +26,12 @@ public class TalkManager : MonoBehaviour
         talkData.Add(10000, new string[] { "안녕?", "여긴 마을회관이야" });
         talkData.Add(11000, new string[] { "안녕?", "문제의 동상이야" });
         talkData.Add(12000, new string[] { "안녕?", "난 촌장아들이야" });
-        talkData.Add(100, new string[] { "스트렌지 마을에 오신것을 환영합니다~"});
+        talkData.Add(100, new string[] { "표지판 : "+"\n스트렌지 마을에 오신것을 환영합니다~",
+            "표지판 : " +"촌장님은 동상 바로 옆집에 있습니다.",
+            "탐정 : " +"\n 드디어 도착했네...",
+            "탐정 : " + "\n 의뢰서에도 작은 산속 마을이라고 적혀있긴 해서 각오는 했지만 ",
+            "탐정 : " +"\n생각보다도 더 험난했을 줄은 몰랐어...",
+            "탐정 :" +"\n그럼 의뢰인인 촌장님을 만나러 가볼까?" });
 
 
         //quest talk
