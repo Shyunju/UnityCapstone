@@ -21,14 +21,14 @@ public class GameManager : MonoBehaviour
         Debug.Log(questManager.CheckQuest());
     }
 
-    public void Action(GameObject scanObj)
+    public void Action(GameObject scanObj)  //오브젝트 ID NPC여부 데이터
     {
         
             scanObject = scanObj;
             ObjData objData = scanObject.GetComponent<ObjData>();
             Talk(objData.id, objData.isNpc);
             talkPanel.SetActive(isAction);
-            next.SetActive(isAction);
+            next.SetActive(isAction); 
     }
 
 
