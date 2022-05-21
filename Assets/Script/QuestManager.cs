@@ -19,8 +19,11 @@ public class QuestManager : MonoBehaviour
     void GenerateData()//퀘스트 저장
     {// 퀘스트아이디,퀘스트데이터 저장
   
-        questList.Add(10, new QuestData("촌장에게 가보자", new int[] {2000,8000})); 
-        questList.Add(20, new QuestData("아들에게 가보자", new int[] {12000,11000,12000})); 
+        questList.Add(10, new QuestData("동상을 찾아보자", new int[] {11000})); 
+        questList.Add(20, new QuestData("주변사람에게 물어보자", new int[] {8000})); 
+        questList.Add(30, new QuestData("왼쪽으로 가보자.. ", new int[] {5000,13000})); 
+        questList.Add(40, new QuestData("촌장에게 가보자!", new int[] {2000})); 
+        questList.Add(50, new QuestData("주변사람에게 물어보자3", new int[] {11000})); 
        
     }
 /*

@@ -2533,6 +2533,7 @@ GameObject:
   - component: {fileID: 520601774}
   - component: {fileID: 520601772}
   - component: {fileID: 520601775}
+  - component: {fileID: 520601773}
   m_Layer: 3
   m_Name: nurse
   m_TagString: Untagged
@@ -2580,6 +2581,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13167953, y: 0.38482916}
   m_EdgeRadius: 0
+--- !u!114 &520601773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520601770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6623271dd17e7c4daa9dcbe3115dfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 13000
+  isNpc: 0
 --- !u!212 &520601774
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23305,8 +23320,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 229859255}
   m_HandleRect: {fileID: 229859254}
   m_Direction: 2
-  m_Value: 0.99999446
-  m_Size: 0.98880607
+  m_Value: 1
+  m_Size: 0.9888061
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
