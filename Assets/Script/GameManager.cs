@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public int talkIndex;
     public GameObject next;
     public statue statue;
+    public Image Illust;
 
 
     void Start()
@@ -56,11 +57,16 @@ public class GameManager : MonoBehaviour
         if (isNpc)
         {
             talkText.text = talkData;
+            Illust.sprite = talkManager.Getillust(id);
+
+            Illust.color = new Color(1, 1, 1, 1);
               
         }
         else
         {
             talkText.text = talkData;
+
+            Illust.color = new Color(1, 1, 1, 0);
         }
         
         isAction = true;

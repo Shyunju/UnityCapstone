@@ -5,9 +5,13 @@ using UnityEngine;
 public class TalkManager : MonoBehaviour
 {
     Dictionary<int, string[]> talkData;
+    Dictionary<int, Sprite> illustData;
+
+    public Sprite[] illustArr;
     void Awake()
     {
         talkData = new Dictionary<int, string[]>();
+        illustData = new Dictionary<int, Sprite>();
         GenerateData();
     }
 
@@ -27,6 +31,8 @@ public class TalkManager : MonoBehaviour
         talkData.Add(11000, new string[] { "안녕?", "문제의 동상이야" });
         talkData.Add(12000, new string[] { "안녕?", "난 촌장아들이야" });
         talkData.Add(13000, new string[] { "안녕?", "간호사야" });
+        talkData.Add(14000, new string[] { "안녕?" });
+        talkData.Add(0, new string[] { "안녕?" });
         talkData.Add(100, new string[] { "표지판 : "+"\n스트렌지 마을에 오신것을 환영합니다~",
             "탐정 : " +"\n 어휴 드디어 도착했다...",
             "탐정 : " + "\n 의뢰서에도 작은 산속 마을이라고 적혀있긴 해서 각오는 했지만 ",
@@ -189,15 +195,22 @@ public class TalkManager : MonoBehaviour
             "촌장 : " + "\n널 이용해서 이마을을 폭파시키려고 했는데...",
             "촌장 : " + "\n아쉽게 됐군..",
         });
+
+        illustData.Add(1000, illustArr[0]);
+        illustData.Add(2000, illustArr[1]);
+        illustData.Add(3000, illustArr[2]);
+        illustData.Add(4000, illustArr[3]);
+        illustData.Add(5000, illustArr[4]);
+        illustData.Add(6000, illustArr[5]);
+        illustData.Add(7000, illustArr[6]);
+        illustData.Add(8000, illustArr[7]);
+        illustData.Add(9000, illustArr[8]);
+        illustData.Add(10000, illustArr[9]);
+        illustData.Add(14000, illustArr[10]);
+        illustData.Add(12000, illustArr[11]);
+
     }
 
-    /*
-탐정 : 병원에 대려다 주셔서 감사합니다.
-
-남자 : 다행이네요, 그나저나 처음보시는 분이신데 축제를 즐기시러 오신건가요? 
-
-탐정 : 아 저는 이 마을의 촌장님에게 의뢰를 받아서 온 탐정입니다. 마을에서 수상한 사건이 계속 터진다고 들어서요...
-*/
     public string GetTalk(int id, int talkIndex) 
     {
         if (!talkData.ContainsKey(id))
@@ -210,5 +223,10 @@ public class TalkManager : MonoBehaviour
             return null;
         else
             return talkData[id][talkIndex];
+    }
+
+    public Sprite Getillust(int id)
+    {
+        return illustData[id];
     }
 }
