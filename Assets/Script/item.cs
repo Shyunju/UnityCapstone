@@ -5,9 +5,7 @@ using UnityEngine;
 //아이템타입 설정
 public enum ItemType
 {
-    Photo,
-    Camera,
-    bag
+    candy
 }
 
 [System.Serializable]

@@ -3896,12 +3896,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639484957}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.03294, y: 266.7549, z: -586.51025}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4885.057, y: 15885.24, z: -40286.15}
+  m_LocalScale: {x: 59.549946, y: 59.549946, z: 59.549946}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 976038250}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &675615851
 GameObject:
@@ -4482,8 +4482,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 458793941}
+  - {fileID: 639484959}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -36710,14 +36711,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemDB:
   - itemType: 0
-    itemName: camera
-    itemImage: {fileID: 21300000, guid: 1465608c94ea7fb41a1fa265bd959f94, type: 3}
-  - itemType: 2
-    itemName: pancel
-    itemImage: {fileID: 21300000, guid: 77f0106698ad40a49a59dc9baddf6323, type: 3}
-  - itemType: 1
-    itemName: photo
-    itemImage: {fileID: 21300000, guid: 0f1e6efeba40d3c49afea8f5be493714, type: 3}
+    itemName: dansu
+    itemImage: {fileID: 21300000, guid: dacffeb37c641a7449c76c42958c72be, type: 3}
   fieldItemPrefab: {fileID: 2917315835031742020, guid: bee5cfe9a2a8eab4690f2a7083076713, type: 3}
   pos:
   - {x: 1, y: 1, z: 1}
@@ -36725,6 +36720,24 @@ MonoBehaviour:
   - {x: 1, y: 4, z: 1}
   - {x: 1, y: 2, z: 1}
   - {x: 1, y: 5, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
+  - {x: 1, y: 6, z: 1}
   - {x: 1, y: 6, z: 1}
 --- !u!4 &1763269164
 Transform:
@@ -36738,7 +36751,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1798599516
 GameObject:
