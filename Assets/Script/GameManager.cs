@@ -16,12 +16,13 @@ public class GameManager : MonoBehaviour
     public GameObject next;
     public statue statue;
 
+
     void Start()
     {
         Debug.Log(questManager.CheckQuest());
     }
 
-    public void Action(GameObject scanObj)  //오브젝트 ID NPC여부 데이터
+    public void Action(GameObject scanObj)  //오브젝트 ID NPC여부 데이터 대화창뜨는 메서드
     {
         
             scanObject = scanObj;
@@ -32,7 +33,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    void Talk(int id, bool isNpc)
+    void Talk(int id, bool isNpc) //토크 메서드
     {
         int questTalkIndex = questManager.GetQuestTalkIndex(id);
         string talkData = talkManager.GetTalk(id+questTalkIndex, talkIndex);
@@ -43,9 +44,11 @@ public class GameManager : MonoBehaviour
             {
                 statue.Bomb();
             }
+            
             isAction = false;
             talkIndex = 0;
             questManager.CheckQuest(id);//퀘스트 순번 증가
+         
             Debug.Log(questManager.CheckQuest(id)); 
             return;
         }

@@ -6,6 +6,7 @@ public class QuestManager : MonoBehaviour
 {
     public int questId; //진행중인 퀘스트 아이디 유니티인스펙터에 값을 작성
     public int questActionIndex; //퀘스트대화순서 변수
+    public position pos;
 
     Dictionary<int, QuestData> questList;  // 딕셔너리 생성
 
@@ -22,7 +23,12 @@ public class QuestManager : MonoBehaviour
         questList.Add(10, new QuestData("동상을 찾아보자", new int[] {11000,8000}));  
         questList.Add(20, new QuestData("왼쪽으로 가보자.. ", new int[] {5000,12000})); 
         questList.Add(30, new QuestData("촌장에게 가보자!", new int[] {2000})); 
-        questList.Add(40, new QuestData("주변사람에게 물어보자", new int[] {5000})); 
+        questList.Add(40, new QuestData("다친사람을 찾아보자", new int[] {5000})); 
+        questList.Add(50, new QuestData("주변사람에게 물어보자", new int[] {3000,9000,7000})); 
+        questList.Add(60, new QuestData("동상으로가보자", new int[] {6000,11000})); 
+        questList.Add(70, new QuestData("사진관으로 가보자", new int[] {4000})); 
+        questList.Add(80, new QuestData("아들 가보자", new int[] {12000})); 
+        questList.Add(90, new QuestData("아들 가보자", new int[] {2000})); 
        
     }
 /*
@@ -58,15 +64,22 @@ public class QuestManager : MonoBehaviour
         {
             questActionIndex++;
         }
-        
-        
+
+
         // ControlObject();
 
         if (questActionIndex == questList[questId].npcId.Length) //퀘스트가 완료 되면 다음 퀘스트로
+        {
+            if (questId == 80)
+            {
+                pos.poss();
+            }
             NextQuest();
-        
+        }
         return questList[questId].questName; // 해당퀘스트 이름을 반환
     }
+
+
     public string CheckQuest() //퀘스트 체크
     {
         return questList[questId].questName; // 해당퀘스트 이름을 반환
