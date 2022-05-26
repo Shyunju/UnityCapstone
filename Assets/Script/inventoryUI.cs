@@ -60,10 +60,10 @@ public class inventoryUI : MonoBehaviour
             inventoryPanel.SetActive(activeInventory);
         }
     }
-    //ΩΩ∑‘¡ı∞°
-    public void AddSlot()
+    public void OpenInventory()
     {
-        inventory.SlotCnt++;
+        activeInventory = !activeInventory;
+        inventoryPanel.SetActive(activeInventory);
     }
 
 }

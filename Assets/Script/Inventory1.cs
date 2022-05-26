@@ -45,7 +45,7 @@ public class Inventory1 : MonoBehaviour
 
     private void Start()
     {
-        SlotCnt = 4;
+        SlotCnt = 24;
     }
 
     //아이템 추가 기능

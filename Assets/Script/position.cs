@@ -6,9 +6,6 @@ public class position : MonoBehaviour
 {
     public void poss()
     {
-       transform.position = new Vector2(0,0);
+       transform.position = new Vector2(-16.59f, 7.5f);
     }
-
- 
-
 }
