@@ -311,9 +311,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 872621075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 554122ff76fc53046bd190e6286e9681, type: 3}
+  m_Script: {fileID: 11500000, guid: ca763bbf3e69c46ea9465215cfc13ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  var: Main
 --- !u!4 &872621077
 Transform:
   m_ObjectHideFlags: 0
@@ -412,7 +413,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 872621076}
-        m_TargetAssemblyTypeName: ChangeFirst, Assembly-CSharp
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
         m_MethodName: SceneChange
         m_Mode: 1
         m_Arguments:
@@ -691,8 +692,8 @@ Canvas:
   m_GameObject: {fileID: 1539647838}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 318803412}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
