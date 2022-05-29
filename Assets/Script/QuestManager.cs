@@ -7,7 +7,7 @@ public class QuestManager : MonoBehaviour
     public int questId; //진행중인 퀘스트 아이디 유니티인스펙터에 값을 작성
     public int questActionIndex; //퀘스트대화순서 변수
     public position pos;
-
+    public change change;
     Dictionary<int, QuestData> questList;  // 딕셔너리 생성
 
     void Awake() // 초기화
@@ -74,6 +74,7 @@ public class QuestManager : MonoBehaviour
             {
                 pos.poss();
             }
+           
             NextQuest();
         }
         return questList[questId].questName; // 해당퀘스트 이름을 반환
@@ -89,6 +90,11 @@ public class QuestManager : MonoBehaviour
 
     void NextQuest() //다음퀘스트로 퀘스트 아이디 증가
     {
+        if (questId == 90)
+        {
+            questId = 0;
+            change.SceneChange();
+        }
         questId += 10;
         questActionIndex = 0;
     }

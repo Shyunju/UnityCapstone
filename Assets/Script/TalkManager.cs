@@ -7,6 +7,7 @@ public class TalkManager : MonoBehaviour
     Dictionary<int, string[]> talkData;
     Dictionary<int, Sprite> illustData;
 
+
     public Sprite[] illustArr;
     void Awake()
     {

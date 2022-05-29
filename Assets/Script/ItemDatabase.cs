@@ -22,10 +22,10 @@ public class ItemDatabase : MonoBehaviour
     private void Start()
     {
         //아이템이 포지션 값에 따라 맵에 뿌려지는 함수
-        for(int i =0; i< 5; i++)
+        for(int i =0; i< 8; i++)
         {
             GameObject go = Instantiate(fieldItemPrefab, pos[i], Quaternion.identity);
-            go.GetComponent<FieldItems>().SetItem(itemDB[Random.Range(0,1)]);
+            go.GetComponent<FieldItems>().SetItem(itemDB[i]);
         }
     }
 

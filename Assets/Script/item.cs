@@ -5,7 +5,8 @@ using UnityEngine;
 //아이템타입 설정
 public enum ItemType
 {
-    candy
+    pic1,
+    pic2,pic3,pic4,pic5,pic6,pic7,pic8
 }
 
 [System.Serializable]
